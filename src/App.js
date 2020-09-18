@@ -49,7 +49,7 @@ export default  function App() {
     return (
         <Router>
             <header className="App App-header">
-                <Link to="/books" className="btn btn-basic">Accueil</Link>
+                <Link to="/livres" className="btn btn-basic">Accueil</Link>
                 {Object.keys(levels).map(key=>{
                     console.log('App levels.map :', key)
                     return (
@@ -58,10 +58,10 @@ export default  function App() {
                                 {key}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Dropdown.Item href={`/books/${key}/`}>Tous les niveaux</Dropdown.Item>
+                                <Dropdown.Item href={`/livres/${key}/`}>Tous les niveaux</Dropdown.Item>
                                 {levels[key].map(
                                     level=>(
-                                        <Dropdown.Item key={level.id} href={`/books/${key}/${level.name}`}>
+                                        <Dropdown.Item key={level.id} href={`/livres/${key}/${level.name}`}>
                                             {level.name}
                                         </Dropdown.Item>
                                     )
@@ -72,13 +72,13 @@ export default  function App() {
             </header>
             <section id="content">
                     <Switch>
-                        <Route path={`/books/:school/:level`}>
+                        <Route path={`/livres/:school/:level`}>
                             <BookList levels={levels}/>
                         </Route>
-                        <Route path="/books/:school">
+                        <Route path="/livres/:school">
                             <BookList levels={levels}/>
                         </Route>
-                        <Route path="/books">
+                        <Route path="/livres">
                             <BookList levels={levels}/>
                         </Route>
                         <Route path="/">
