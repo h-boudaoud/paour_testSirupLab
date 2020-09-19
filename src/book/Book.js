@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function BookList(props) {
-   return  <div key={props.book.id} className="book">
+    return  <div key={props.book.id} className="book col-md-4 m-0 p-2">
         <h3>{props.book.title}</h3>
-        <div>
+        <div className="m-0 p-2">
             prix : {props.book.price / 100}€
             <br/>Sujets :
             <ul>
