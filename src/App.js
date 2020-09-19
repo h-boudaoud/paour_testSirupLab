@@ -58,10 +58,10 @@ export default  function App() {
                                 {key}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                                <Dropdown.Item href={`/livres/${key}/`}>Tous les niveaux</Dropdown.Item>
+                                <Dropdown.Item as={Link} to={`/livres/${key}/`}>Tous les niveaux</Dropdown.Item>
                                 {levels[key].map(
                                     level=>(
-                                        <Dropdown.Item key={level.id} href={`/livres/${key}/${level.name}`}>
+                                        <Dropdown.Item key={level.id} as={Link} to={`/livres/${key}/${level.name}`}>
                                             {level.name}
                                         </Dropdown.Item>
                                     )
