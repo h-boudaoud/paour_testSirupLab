@@ -2,7 +2,6 @@ import {useParams} from "react-router-dom";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import BookListUpload from "./BookListUpload"
-import "./book.css"
 
 export default function BookList(props) {
 

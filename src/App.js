@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import './App.css';
+import ChapterList from "./Chapter/ChapterList";
 
 export default  function App() {
     const levels = {
@@ -80,6 +81,9 @@ export default  function App() {
                         </Route>
                         <Route path="/livres">
                             <BookList levels={levels}/>
+                        </Route>
+                        <Route path="/livre/:id/chapters">
+                            <ChapterList/>
                         </Route>
                         <Route path="/">
                             <div>Accueil</div>
